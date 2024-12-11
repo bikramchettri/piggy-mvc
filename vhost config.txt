@@ -1,0 +1,20 @@
+<VirtualHost *:80>
+    DocumentRoot "D:/root/piggy-mvc/public"
+    ServerName piggy-mvc.test
+    ServerAlias *.piggy-mvc.test
+    <Directory "D:/root/piggy-mvc/public">
+		RewriteEngine On
+
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+
+		RewriteRule ^ /index.php [L,QSA,NC]
+
+		#RewriteRule ^(.*)$ /index.php [L,QSA,NC]
+
+        # AllowOverride All
+        # Require all granted
+    </Directory>
+</VirtualHost>
+
+# If you want to use SSL, enable it by going to Menu > Apache > SSL > Enabled

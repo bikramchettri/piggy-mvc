@@ -1,0 +1,13 @@
+{
+  "name": "bikram/piggy-mvc",
+  "description": "A PHP application for tracking expenses.",
+  "type": "project",
+  "license": "MIT",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "src/Framework",
+      "App\\": "src/App"
+    }
+  }
+}
